@@ -1,7 +1,7 @@
 const express = require('express');
 const ejsLayout = require('express-ejs-layouts');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 
 app.set('view engine', 'ejs');//use ejs
@@ -40,5 +40,5 @@ app.use('/', (req, res) => {
 })
 
 app.listen(port, () => {
-	console.log(`Server Express Running at http://localhost:${port}`);
+	console.log(`Server Express Running at PORT : ${port}`);
 });
