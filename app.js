@@ -1,17 +1,17 @@
 const express = require('express');
-const ejs = require('ejs');
 const ejsLayout = require('express-ejs-layouts');
 const app = express();
 const port = process.env.PORT || 3000;
 
 
-app.set('view engine',ejs);//use ejs
+app.set('view engine','ejs');//use ejs
+
 app.use(ejsLayout);//use express-ejs-layouts
 
 
 app.get('/', (req, res) => {
 	//res.sendFile('./html/index.html', { root: __dirname });
-	res.render('index', {
+	res.render('home', {
 		layout: './layout/layout',
 		pageTitle: 'Homepage'
 	})
