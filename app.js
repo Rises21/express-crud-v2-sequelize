@@ -100,6 +100,7 @@ const app = express();
 const path = require('path');
 const port = process.env.PORT || 3000;
 const logger = require('morgan');
+const cors = require('cors');
 const productRouter = require('./app/product/routes');
 const database = require('./config/sequelize');
 const productRouterV2 = require('./app/product_v2/routes');
@@ -108,6 +109,7 @@ const productRouterV2 = require('./app/product_v2/routes');
 app.use(logger('dev'));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+app.use(cors());
 database
 	.sync({alter: true}) //lakukan sinkronisasi tabel yang ada dalam db agar sesuai dengan skema model yang akan di buat
 	.then(() => {
