@@ -4,7 +4,7 @@
   "description": "Belajar Express js",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,8 +21,14 @@
     "nodemon": "^2.0.21"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "ejs": "^3.1.9",
     "express": "^4.17.1",
-    "express-ejs-layouts": "^2.5.1"
+    "express-ejs-layouts": "^2.5.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.2.0",
+    "sequelize": "^6.30.0"
   }
 }
