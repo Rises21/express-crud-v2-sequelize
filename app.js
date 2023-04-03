@@ -119,6 +119,11 @@ database
 		console.error(`Failed to Sync Database: ${err.message}`);
 	});
 
+app.use('/', (req, res) => {
+	res.json({
+		message: "Please change the route path to https://express-crud-v2-sequelize.onrender.com/api/v2/product"
+	});
+})
 app.use('/public', express.static(path.join(__dirname, 'uploads')));
 app.use('/api/v1', productRouter);
 app.use('/api/v2', productRouterV2);
