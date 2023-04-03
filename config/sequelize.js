@@ -1,10 +1,20 @@
 const {Sequelize} = require('sequelize');
 
+// const sequelize = new Sequelize({
+//    database: 'eduwork-crud-v2',
+//    host: 'localhost',
+//    username: 'root',
+//    password: 'root',
+//    dialect: 'mysql' 
+// });
+
+
+//using freesqldatabase for deploy
 const sequelize = new Sequelize({
-   database: 'eduwork-crud-v2',
-   host: 'localhost',
-   username: 'root',
-   password: 'root',
+   database: 'sql12610471',
+   host: 'sql12.freesqldatabase.com',
+   username: 'sql12610471',
+   password: 'qNBEaM87TT',
    dialect: 'mysql' 
 });
 
